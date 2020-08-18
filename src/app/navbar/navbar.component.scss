@@ -1,0 +1,31 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 15%;
+  a.brand {
+    font-size: 24px;
+  }
+  a {
+    text-decoration: none !important;
+    color: inherit;
+  }
+  ul {
+    display: flex;
+    list-style: none;
+    li {
+      a {
+        padding: 0 15px;
+        opacity: 0.5;
+        transition: 0.2s ease-in-out;
+        text-align: center;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      a.active {
+        opacity: 1;
+      }
+    }
+  }
+}
