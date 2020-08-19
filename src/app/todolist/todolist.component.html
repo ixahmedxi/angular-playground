@@ -1,0 +1,20 @@
+<div class="todolist-wrapper">
+  <form (ngSubmit)="addTodo($event)">
+    <input
+      type="text"
+      name="todo"
+      id="todo"
+      [(ngModel)]="todoInputValue"
+      placeholder="Your new todo..."
+    />
+    <button type="submit">Add Todo</button>
+  </form>
+  <ul>
+    <li *ngFor="let item of todos">
+      {{ item.text }}
+      <button (click)="removeTodo(item.id)">
+        <img src="assets/trash.svg" />
+      </button>
+    </li>
+  </ul>
+</div>
